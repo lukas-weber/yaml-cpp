@@ -126,8 +126,8 @@ yamlcpp_dep = declare_dependency(
   version : meson.project_version(),
 )
 
-gtest_dep = dependency('gtest', fallback : ['gtest', 'gtest_dep'], required : false)
-gmock_dep = dependency('gmock', fallback : ['gtest', 'gmock_dep'], required : false)
+gtest_dep = dependency('gtest', required : false)
+gmock_dep = dependency('gmock', required : false)
 if gtest_dep.found()
   subdir('test')
   test('all tests', tests)
